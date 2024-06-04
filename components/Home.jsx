@@ -1,5 +1,7 @@
 import React from 'react';
-import { Button, View, StyleSheet } from 'react-native';
+import { Button, View, StyleSheet, Image } from 'react-native';
+
+
 
 // Definindo o componente Home
 export default function Home({ navigation }) {
@@ -8,18 +10,21 @@ export default function Home({ navigation }) {
 
         <View style={styles.container}>
 
-            {/* <Image source={require('../assets/logo.png')} style={{width: '90%', height: 150, marginBottom: 45}} /> */}
-
+            <Image source={require("../assets/unnamed.png")} style={{width: '90%', height: 150, marginBottom: 45}} />
             <View style={styles.button}>
-                <Button style={styles.button} title="Iniciar Quiz" onPress={() => navigation.navigate('Add')} />
+                <Button style={styles.button} title="Adicionar pergunta" onPress={() => navigation.navigate('Add')} />
             </View>
-
             <View style={styles.button}>
-                <Button style={styles.button} title="Criar Pergunta" onPress={() => navigation.navigate('Quiz')} color={'green'} />
+                <Button style={styles.button} title="Iniciar Quiz de 10 perguntas" onPress={() => navigation.navigate('Quiz10')}  color={'brown'}/>
+            </View>
+            <View style={styles.button}>
+                <Button style={styles.button} title="Iniciar quiz" onPress={() => navigation.navigate('Quiz')} color={'green'} />
             </View>
             <View style={styles.button}>
                 <Button style={styles.button} title="Editar Perguntas" onPress={() => navigation.navigate('Edit')} color={'red'} />
             </View>
+
+            
         </View>
     )
 }

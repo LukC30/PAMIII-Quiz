@@ -3,9 +3,11 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
 import Home from './components/Home'
-import Add from './components/Quiz'
-import Quiz from './components/Add'
+import Add from './components/Add'
+import Quiz from './components/Quiz'
 import Edit from './components/Edit'
+import Quiz10 from "./components/Quiz10";
+import Points from "./components/final";
 
 const Stack = createStackNavigator()
 
@@ -17,6 +19,8 @@ export default function App() {
                 <Stack.Screen name="Add" component={Add} />
                 <Stack.Screen name="Quiz" component={Quiz} />
                 <Stack.Screen name="Edit" component={Edit} />
+                <Stack.Screen name="Quiz10" component={Quiz10} />
+                <Stack.Screen name="pontos" component={Points} />
             </Stack.Navigator>
         </NavigationContainer>
     );

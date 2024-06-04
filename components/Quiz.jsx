@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Alert, Button, Text, View, StyleSheet } from 'react-native';
 import * as SQLite from 'expo-sqlite';
 
-const db = SQLite.openDatabase('quiz.db');
+const db = SQLite.openDatabase('qsuiz.db');
 
 export default function Quiz() {
     const [pergunta, setPergunta] = useState('');
